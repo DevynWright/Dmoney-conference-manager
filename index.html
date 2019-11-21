@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Conference Manager.</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Conference Manager</title>
-</head>
-
-<body class="text-white">
+  <body class="text-white">
     <header class="container-fluid bg-dark h-25 text-center">
-        <div class="row h-100 align-items-center">
-            <h1 class="col-12">
-                Conference Manager
-            </h1>
-        </div>
+      <div class="row h-100 align-items-center">
+        <h1 class="col-12">
+          Conference Manager
+        </h1>
+      </div>
     </header>
     <main class="container-fluid h-75 bg-secondary">
-        <div id="sessions" class="row p-3 justify-content-around">
-            <!-- example sessions lets get these dynamically drawing on the screen -->
-            <div class="col-5 mt-3 p-3 border rounded bg-info">
-                <h1 class="text-center border-bottom">Session Name</h1>
-                <dl class="ml-5">
-                    
-                    <dt>Speaker Name</dt>
-                    <dd>Topic</dd>
-                    <button class="btn btn-danger" type="button" onclick="app.SessionsController.deleteSpeaker()">Delete</button>
-                </dl>
-                
-                  
-            </div>
-            <div class="col-5 mt-3 p-3 border rounded bg-info">
-                <h1 class="text-center border-bottom">Session Name</h1>
-                <dl class="ml-5">
-                    <dt>Speaker Name</dt>
-                    <dd>Topic</dd>
-                    <dt>Speaker Name</dt>
-                    <dd>Topic</dd>
-                </dl>
-            </div>
-            <div class="col-5 mt-3 p-3 border rounded bg-info">
-                <h1 class="text-center border-bottom">Session Name</h1>
-                <dl class="ml-5">
-                    <dt>Speaker Name</dt>
-                    <dd>Topic</dd>
-                </dl>
-            </div>
-            <div class="col-5 mt-3 p-3 border rounded bg-info">
-                <h1 class="text-center border-bottom">Session Name</h1>
-                <dl class="ml-5">
-                    <dt>Speaker Name</dt>
-                    <dd>Topic</dd>
-                    <dt>Speaker Name</dt>
-                    <dd>Topic</dd>
-                    <dt>Speaker Name</dt>
-                    <dd>Topic</dd>
-                </dl>
-            </div>
+      <div id="sessions" class="row p-3 justify-content-around">
+        <!-- example sessions lets get these dynamically drawing on the screen -->
+        <div class="col-5 mt-3 p-3 border rounded bg-info">
+          <h1 class="text-center border-bottom">Session Name</h1>
+          <dl class="ml-5">
+            <dt>Speaker Name</dt>
+            <dd>Topic</dd>
+            <button
+              class="btn btn-danger"
+              type="button"
+              onclick="app.SessionsController.deleteSpeaker()"
+            >
+              Delete
+            </button>
+          </dl>
         </div>
+        <div class="col-5 mt-3 p-3 border rounded bg-info">
+          <h1 class="text-center border-bottom">Session Name</h1>
+          <dl class="ml-5">
+            <dt>Speaker Name</dt>
+            <dd>Topic</dd>
+            <dt>Speaker Name</dt>
+            <dd>Topic</dd>
+          </dl>
+        </div>
+        <div class="col-5 mt-3 p-3 border rounded bg-info">
+          <h1 class="text-center border-bottom">Session Name</h1>
+          <dl class="ml-5">
+            <dt>Speaker Name</dt>
+            <dd>Topic</dd>
+          </dl>
+        </div>
+        <div class="col-5 mt-3 p-3 border rounded bg-info">
+          <h1 class="text-center border-bottom">Session Name</h1>
+          <dl class="ml-5">
+            <dt>Speaker Name</dt>
+            <dd>Topic</dd>
+            <dt>Speaker Name</dt>
+            <dd>Topic</dd>
+            <dt>Speaker Name</dt>
+            <dd>Topic</dd>
+          </dl>
+        </div>
+      </div>
     </main>
 
     <script src="app/main.js" type="module"></script>
-</body>
-
+  </body>
 </html>
