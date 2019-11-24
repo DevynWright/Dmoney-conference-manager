@@ -39,6 +39,7 @@ export default class Session {
                         <div class="form-group row justify-content-center">
                             <div class="col-sm-8">
                                 <button type="submit" class="btn btn-primary btn-block">Action</button>
+                                <button class="btn btn-danger btn-block" type="button" onclick="app.sessionsController.deleteSession('${this.id}')">Delete</button>
                             </div>
                         </div>
                     </form>

@@ -2,7 +2,14 @@ import _store from "../store.js";
 import Speaker from "../Models/Speaker.js";
 import Session from "../Models/Session.js";
 
+
 class SessionsService {
+  addSession(sessionData) {
+    let freshSession = new Session(sessionData);
+    _store.State.sessions.push(freshSession);
+    _store.saveState();
+  }
+
   addSpeaker(speakerData) {
     let speaker = new Speaker(speakerData);
     let foundSession = _store.State.sessions.find(
@@ -12,10 +19,6 @@ class SessionsService {
     _store.saveState();
   }
 
-  addSession(sessionData) {
-    let freshSession = new Session(sessionData);
-    _store.State.sessions.push(freshSession)
-  }
 
   deleteSpeaker(sessionId, speakerId) {
     let foundSession = _store.State.sessions.find(
@@ -28,6 +31,10 @@ class SessionsService {
   }
   constructor() {
     console.log("Hello from sesionsService");
+  }
+  deleteSession(sessionId){
+    _store.State.sessions.splice(sessionId, 1);
+    _store.saveState();
   }
 }
 

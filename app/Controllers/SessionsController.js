@@ -53,4 +53,8 @@ export default class SessionsController {
     SessionsService.deleteSpeaker(sessionId, speakerId);
     _drawSessions();
   }
+  deleteSession(sessionId) {
+    SessionsService.deleteSession(sessionId);
+    _drawSessions();
+  }
 }
