@@ -1,6 +1,7 @@
 import _store from "../store.js";
 import Speaker from "../Models/Speaker.js";
 import Session from "../Models/Session.js";
+import store from "../store.js";
 
 
 class SessionsService {
@@ -33,7 +34,8 @@ class SessionsService {
     console.log("Hello from sesionsService");
   }
   deleteSession(sessionId){
-    _store.State.sessions.splice(sessionId, 1);
+    let foundSession = store.State.sessions.findIndex(session => session.id == sessionId)
+    _store.State.sessions.splice(foundSession, 1);
     _store.saveState();
   }
 }

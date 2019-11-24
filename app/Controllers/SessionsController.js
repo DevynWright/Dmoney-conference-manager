@@ -4,8 +4,6 @@ import { generateId } from "../Utils.js";
 
 // private
 function _drawSessions() {
-  // get html
-
   let template = "";
   let sessions = _store.State.sessions;
   sessions.forEach(session => (template += session.template));
